@@ -18,6 +18,11 @@
 
     <main>
         <div class="container">
+            <div>
+                <a href="{{ route('comics.create') }}">
+                    <p>Create a new comic</p>
+                </a>
+            </div>
             <ul class="d-flex gap-3 flex-wrap">
                 @foreach ($comics as $comic)
                     <div class="card" style="width: 18rem;">
