@@ -25,10 +25,10 @@
                             <img src={{ $comic->thumb_img }} class="card-img-top img-fluid" alt={{ $comic->title }}>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title text-center pb-3">{{ $comic->title }}</h5>
-                            <p class="card-text"><strong>Serie:</strong> {{ $comic->series }}</p>
-                            <p class="card-text"><strong>Tipo:</strong> {{ $comic->type }}</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title text-center pb-3" style="height: 70px">{{ $comic->title }}</h5>
+                            <p class="card-text" style="height: 35px"><strong>Series:</strong> {{ $comic->series }}</p>
+                            <p class="card-text"><strong>Type:</strong> {{ $comic->type }}</p>
+                            <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-primary">Details</a>
                         </div>
                     </div>
                 @endforeach
