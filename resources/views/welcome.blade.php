@@ -10,9 +10,11 @@
 </head>
 
 <body>
-    <div class="container text-center">
-        <h1 class="py-3">Laravel DC Comics</h1>
-    </div>
+    <header>
+        <div class="container text-center">
+            <h1 class="py-3">Laravel DC Comics</h1>
+        </div>
+    </header>
 </body>
 
 </html>
