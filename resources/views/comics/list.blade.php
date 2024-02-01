@@ -17,11 +17,23 @@
     </header>
 
     <main>
-        <ul>
-            @foreach ($comics as $comic)
-                <li>{{ $comic->title }}</li>
-            @endforeach
-        </ul>
+        <div class="container">
+            <ul class="d-flex gap-3 flex-wrap">
+                @foreach ($comics as $comic)
+                    <div class="card" style="width: 18rem;">
+                        <div class="cnt-img pt-2">
+                            <img src={{ $comic->thumb_img }} class="card-img-top img-fluid" alt={{ $comic->title }}>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-center pb-3">{{ $comic->title }}</h5>
+                            <p class="card-text"><strong>Serie:</strong> {{ $comic->series }}</p>
+                            <p class="card-text"><strong>Tipo:</strong> {{ $comic->type }}</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                @endforeach
+            </ul>
+        </div>
     </main>
 </body>
 
