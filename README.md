@@ -13,5 +13,10 @@ Iniziare a definire le prime operazioni CRUD con le relative view:
 - store()
 <br><br>
 
+## Terminare le operazioni di CRUD
+- edit()
+- update()
+- destroy()
+
 ### Bonus
 creare il seeder per la tabella comics utilizzando il file in allegato.
