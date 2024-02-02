@@ -33,6 +33,7 @@
                             <p class="card-text"><strong>Description:</strong> {{ $comic->description }}</p>
                             <p class="card-text"><strong>Artists:</strong> {{ $comic->artists }}</p>
                             <p class="card-text"><strong>Writers:</strong> {{ $comic->writers }}</p>
+                            <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-primary">Update</a>
                         </div>
                     </div>
                 </div>

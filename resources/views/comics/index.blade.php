@@ -31,9 +31,13 @@
                         </div>
                         <div class="card-body">
                             <h5 class="card-title text-center pb-3" style="height: 70px">{{ $comic->title }}</h5>
-                            <p class="card-text" style="height: 35px"><strong>Series:</strong> {{ $comic->series }}</p>
-                            <p class="card-text"><strong>Type:</strong> {{ $comic->type }}</p>
-                            <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-primary">Details</a>
+                            <p class="card-text text-center" style="height: 35px"><strong>Series:</strong>
+                                {{ $comic->series }}</p>
+                            <p class="card-text text-center"><strong>Type:</strong> {{ $comic->type }}</p>
+                            <div class="text-center pt-3">
+                                <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-primary">Details</a>
+                                <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-primary">Update</a>
+                            </div>
                         </div>
                     </div>
                 @endforeach
