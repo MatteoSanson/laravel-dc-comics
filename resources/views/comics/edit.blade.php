@@ -57,13 +57,13 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-                    <textarea class="form-control" name="description" rows="6" value="{{ $comic->description }}"></textarea>
+                    <textarea class="form-control" name="description" rows="6">{{ $comic->description }}</textarea>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Image</label>
                     <input type="text" class="form-control" name="thumb_img" value="{{ $comic->thumb_img }}">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Update your data</button>
             </form>
             <div class="py-3">
                 <a href="{{ route('comics.index') }}" class="py-2">Back to comics list</a>
