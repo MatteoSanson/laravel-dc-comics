@@ -33,7 +33,15 @@
                             <p class="card-text"><strong>Description:</strong> {{ $comic->description }}</p>
                             <p class="card-text"><strong>Artists:</strong> {{ $comic->artists }}</p>
                             <p class="card-text"><strong>Writers:</strong> {{ $comic->writers }}</p>
-                            <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-primary">Update</a>
+
+                            <div class="pt-2 d-flex gap-3">
+                                <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-primary">Update</a>
+                                <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <input type="submit" value="Delete" class="btn btn-danger">
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
