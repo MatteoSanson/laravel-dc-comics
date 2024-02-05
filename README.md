@@ -1,9 +1,9 @@
-# Esercizio Laravel Dc Comics
+# Esercizio 1: Laravel Dc Comics
 
 Creare un nuovo progetto Laravel per gestire un archivio di fumetti.<br>
 
 ## Milestone 1
-Tramite gli appositi comandi artisan create un model con relativa migration e un resource controller.<br>
+Tramite gli appositi comandi artisan create un model con relativa migration e un resource controller.<br><br>
 
 ## Milestone 2
 Iniziare a definire le prime operazioni CRUD con le relative view:
@@ -14,17 +14,23 @@ Iniziare a definire le prime operazioni CRUD con le relative view:
 <br><br>
 
 ### Bonus
-creare il seeder per la tabella comics utilizzando il file in allegato.
+
+Creare il seeder per la tabella comics utilizzando il file in allegato.
 <br><br><hr>
 
-## Terminare le operazioni di CRUD
+## Esercizio 2: Terminare le operazioni di CRUD
 - edit()
 - update()
 - destroy()
-<br>
+<br><br>
+
+### Bonus
+
+Tramite javascript, quando l'utente clicca sul pulsante "delete", chiedere conferma della cancellazione, prima di eliminare l'elemento.
+<br><br>
 <hr>
 
-## Validazione
+## Esercizio 3: Validazione
 
 Aggiungere le validazioni in modo da rendere più stabile il gestionale di fumetti.<br><br>
 
