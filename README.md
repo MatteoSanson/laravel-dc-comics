@@ -36,5 +36,5 @@ Aggiungere le validazioni in modo da rendere più stabile il gestionale di fumet
 
 
 ### Bonus
-- validare gli input ricevuti in fase di creazione e modifica, rispondendo con errori chiari e in italiano.
-- utilizzare le Request personalizzate per validare i dati.
+1) validare gli input ricevuti in fase di creazione e modifica, rispondendo con errori chiari e in italiano.
+2) utilizzare le Request personalizzate per validare i dati.
