@@ -32,19 +32,33 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+        dd($errors->toArray());
+        $request->validate([
+            'title' => 'required|max:60',
+            'series' => 'required|max:100',
+            'type' => 'required|max:40',
+            'price' => 'required|numeric|min:0|regex:/^\d{1,8}(\.\d{2})?$/',
+            'sale_date' => 'nullable|date_format:Y-m-d',
+            'description' => 'nullable',
+            'artists' => 'required|max:300',
+            'writers' => 'required|max:300',
+            'thumb_img' => 'nullable|url|ends_with:.jpeg,.png,.svg,.webp,.bmp|max:400',
+        ]);
+
         $data = $request->all();
         
         $comic = new Comic();
-        $comic->title = $data['title'];
-        $comic->series = $data['series'];
-        $comic->type = $data['type'];
-        $comic->price = $data['price'];
-        $comic->sale_date = $data['sale_date'];
-        $comic->description = $data['description'];
-        $comic->artists = $data['artists'];
-        $comic->writers = $data['writers'];
-        $comic->thumb_img = $data['thumb_img'];
+        // $comic->title = $data['title'];
+        // $comic->series = $data['series'];
+        // $comic->type = $data['type'];
+        // $comic->price = $data['price'];
+        // $comic->sale_date = $data['sale_date'];
+        // $comic->description = $data['description'];
+        // $comic->artists = $data['artists'];
+        // $comic->writers = $data['writers'];
+        // $comic->thumb_img = $data['thumb_img'];
 
+        $comic->fill($data);
         $comic->save();
 
         return redirect()->route('comics.show', $comic->id);
