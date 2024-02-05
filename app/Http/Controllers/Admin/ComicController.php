@@ -96,7 +96,7 @@ class ComicController extends Controller
     {
         // $data = $request->all();
         $data = $this->validation($request->all());
-        
+        //
         $comic->update($data);
 
         return redirect()->route('comics.show', $comic->id);

@@ -87,6 +87,7 @@
                 <label class="form-label">Image</label>
                 <input type="text" class="form-control" name="thumb_img"
                     value="{{ old('thumb_img', $comic->thumb_img) }}">
+                {{-- asd --}}
                 @error('thumb_img')
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
