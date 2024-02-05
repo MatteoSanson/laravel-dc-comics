@@ -32,14 +32,16 @@
                         <div class="card-body">
                             <h5 class="card-title text-center pb-2" style="height: 50px">{{ $comic->title }}</h5>
                             <div class="text-center pt-2">
-                                <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-primary">Details</a>
-                                <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-primary">Update</a>
+                                <a href="{{ route('comics.show', $comic->id) }}"
+                                    class="btn btn-primary btn-sm">Details</a>
+                                <a href="{{ route('comics.edit', $comic->id) }}"
+                                    class="btn btn-primary btn-sm">Update</a>
                             </div>
                             <div class="text-center pt-2">
                                 <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <input type="submit" value="Delete" class="btn btn-danger">
+                                    <input type="submit" value="Delete" class="btn btn-danger btn-sm">
                                 </form>
                             </div>
                         </div>
