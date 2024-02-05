@@ -24,7 +24,7 @@
 
             <div class="mb-3">
                 <label class="form-label">Title</label>
-                <input type="text" class="form-control" @error('title') is-invalid @enderror name="title" required>
+                <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" required>
                 @error('title')
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror

@@ -32,17 +32,18 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        dd($errors->toArray());
         $request->validate([
             'title' => 'required|max:60',
             'series' => 'required|max:100',
             'type' => 'required|max:40',
             'price' => 'required|numeric|min:0|regex:/^\d{1,8}(\.\d{2})?$/',
-            'sale_date' => 'nullable|date_format:Y-m-d',
-            'description' => 'nullable',
+            // 'sale_date' => 'nullable|date_format:Y-m-d',
+            'sale_date' => 'date_format:Y-m-d',
+            // 'description' => 'nullable',
             'artists' => 'required|max:300',
             'writers' => 'required|max:300',
-            'thumb_img' => 'nullable|url|ends_with:.jpeg,.png,.svg,.webp,.bmp|max:400',
+            // 'thumb_img' => 'nullable|url|ends_with:.jpeg,.png,.svg,.webp,.bmp|max:400',
+            'thumb_img' => 'url|ends_with:.jpeg,.png,.svg,.webp,.bmp|max:400',
         ]);
 
         $data = $request->all();
